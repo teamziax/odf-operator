@@ -169,7 +169,7 @@ catalog: opm ## Generate catalog manifests and then validate generated files.
 	$(OPM) render --output=yaml $(NOOBAA_BUNDLE_IMG) $(OPM_RENDER_OPTS) > catalog/noobaa.yaml
 	$(OPM) render --output=yaml $(CSIADDONS_BUNDLE_IMG) $(OPM_RENDER_OPTS) > catalog/csiaddons.yaml
 	$(OPM) validate catalog
-	echo catalog/ocs.yaml
+	cat catalog/ocs.yaml
 
 .PHONY: catalog-build
 catalog-build: catalog ## Build a catalog image.
