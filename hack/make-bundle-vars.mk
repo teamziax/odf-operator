@@ -48,8 +48,8 @@ REPLACES ?=
 SKIP_RANGE ?=
 
 # Image URL to use all building/pushing image targets
-IMAGE_REGISTRY ?= quay.io
-REGISTRY_NAMESPACE ?= ocs-dev
+IMAGE_REGISTRY ?= ghcr.io/teamziax
+REGISTRY_NAMESPACE ?= ocs
 IMAGE_TAG ?= latest
 IMAGE_NAME ?= odf-operator
 BUNDLE_IMAGE_NAME ?= $(IMAGE_NAME)-bundle
@@ -141,7 +141,7 @@ IBM_SUBSCRIPTION_CATALOGSOURCE_NAMESPACE ?= $(OPERATOR_CATALOGSOURCE_NAMESPACE)
 # kube rbac proxy image variables
 CLUSTER_ENV ?= openshift
 KUBE_RBAC_PROXY_IMG ?= gcr.io/kubebuilder/kube-rbac-proxy:v0.13.1
-OSE_KUBE_RBAC_PROXY_IMG ?= registry.redhat.io/openshift4/ose-kube-rbac-proxy:v4.11.0
+OSE_KUBE_RBAC_PROXY_IMG ?= quay.io/brancz/kube-rbac-proxy:v0.15.0
 
 ifeq ($(CLUSTER_ENV), openshift)
 	RBAC_PROXY_IMG ?= $(OSE_KUBE_RBAC_PROXY_IMG)

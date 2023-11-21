@@ -6,5 +6,5 @@ metadata:
 spec:
   sourceType: grpc
   image: catalog-img
-  displayName: OpenShift Data Foundation
+  displayName: Ziax OpenShift Data Foundation
   publisher: Red Hat
