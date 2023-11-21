@@ -6,8 +6,6 @@ on:
       IMAGE_TAG:
         required: true
         default: latest
-      OCS_BUNDLE_IMG_TAG:
-        required: false
 
 jobs:
   docker-push:
@@ -33,7 +31,6 @@ jobs:
         IMAGE_TAG: ${{ github.event.inputs.IMAGE_TAG }}
         IMAGE_REGISTRY: ghcr.io/teamziax
         OCS_BUNDLE_IMG_LOCATION: ghcr.io/teamziax/ocs-operator
-        OCS_BUNDLE_IMG_TAG: ${{ github.event.inputs.OCS_BUNDLE_IMG_TAG }}
       run: |
         make docker-build docker-push
         make bundle-build bundle-push
