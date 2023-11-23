@@ -4,7 +4,7 @@ metadata:
   name: ibm-storage-odf-operator
   namespace: openshift-storage
 spec:
-  channel: stable-v1.4
+  channel: stable-v1.3
   installPlanApproval: Automatic
   name: ibm-storage-odf-operator
   source: odf-catalogsource
